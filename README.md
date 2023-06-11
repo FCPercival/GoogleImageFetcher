@@ -12,6 +12,8 @@ Arguments:
   -h                    : Show help
 ```
 
+To install all the required libraries use the command: <code>pip install -r requirements.txt</code>
+
 ### Examples
 
 <code>python3 main.py -s "Cat" -t "Animal" -d "/home/user/images"</code>
