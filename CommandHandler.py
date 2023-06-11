@@ -18,16 +18,16 @@ class CommandHandler:
         except FileNotFoundError:
             DIR = "ERROR FETCHING DIRECTORY"
 
-        print("Usage: python3 main.py -s <query> [-t <image_type>] [-dir <directory>] [-h]")
+        print("Usage: python3 main.py -s <query> [-t <image_type>] [-d <directory>] [-h]")
         print("Arguments:")
         print("  -s <query>            : Search query for images (required)")
         print("  -t <image_type>       : Image type (optional, default: Action)")
-        print("  -dir <directory>      : Directory path for saving images (optional, default: " + DIR + ")")
+        print("  -d <directory>        : Directory path for saving images (optional, default: " + DIR + ")")
         print("  -h                    : Show help")
 
     def parse_arguments(self, argv):
         try:
-            opts, args = getopt.getopt(argv, "s:t:dir:h")
+            opts, args = getopt.getopt(argv, "s:t:d:h")
         except getopt.GetoptError:
             self.print_usage()
             sys.exit(2)
@@ -37,7 +37,7 @@ class CommandHandler:
                 self.query = arg
             elif opt == "-t":
                 self.image_type = arg
-            elif opt == "-dir":
+            elif opt == "-d":
                 self.directory = arg
             elif opt == "-h":
                 self.print_usage()
