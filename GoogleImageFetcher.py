@@ -25,7 +25,9 @@ class GoogleImageFetcher:
         images = [a['src'] for a in soup.find_all("img", {"src": re.compile("gstatic.com")})]
 
         if self.directory is None:
-            DIR = "/home/federico/Immagini"
+            home_dir = os.path.expanduser("~")
+            images_dir = os.path.join(home_dir, "Images")
+            DIR = images_dir
         else:
             DIR = self.directory
 

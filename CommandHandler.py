@@ -1,5 +1,6 @@
 import getopt
 import sys
+import os
 from GoogleImageFetcher import GoogleImageFetcher
 
 
@@ -10,11 +11,18 @@ class CommandHandler:
         self.directory = None
 
     def print_usage(self):
+        try:
+            home_dir = os.path.expanduser("~")
+            images_dir = os.path.join(home_dir, "Images")
+            DIR = images_dir
+        except FileNotFoundError:
+            DIR = "ERROR FETCHING DIRECTORY"
+
         print("Usage: python3 main.py -s <query> [-t <image_type>] [-dir <directory>] [-h]")
         print("Arguments:")
         print("  -s <query>            : Search query for images (required)")
         print("  -t <image_type>       : Image type (optional, default: Action)")
-        print("  -dir <directory>      : Directory path for saving images (optional, default: /home/federico/Immagini)")
+        print("  -dir <directory>      : Directory path for saving images (optional, default: " + DIR + ")")
         print("  -h                    : Show help")
 
     def parse_arguments(self, argv):
