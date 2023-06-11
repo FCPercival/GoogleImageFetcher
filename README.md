@@ -1,6 +1,6 @@
 # GoogleImageFetcher
  
-This is a simple fetcher for images using Google Images (Fetches 20 images with one call)
+This is a simple fetcher for images using Google Images. (Fetches 20 images with one call)
 
 ## USAGE
 ```
@@ -19,4 +19,4 @@ To install all the required libraries use the command: <code>pip install -r requ
 <code>python3 main.py -s "Cat" -t "Animal" -d "/home/user/images"</code>
 
 # License
-This project is under the MIT license, see the LICENSE file for more informations
+This project is under the MIT license, see the LICENSE file for more informations.
