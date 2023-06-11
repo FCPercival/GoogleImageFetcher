@@ -15,3 +15,6 @@ Arguments:
 ### Examples
 
 <code>python3 main.py -s "Cat" -t "Animal" -d "/home/user/images"</code>
+
+# License
+This project is under the MIT license, see the LICENSE file for more informations
