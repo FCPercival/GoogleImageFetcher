@@ -2,6 +2,10 @@
  
 This is a simple fetcher for images using Google Images. (Fetches 20 images with one call)
 
+The program constructs a URL based on the query and sends a request to Google, it then parses the HTML response using BeautifulSoup to extract the image URLs and saves the raw images to the specified directory or at the default directory.
+
+Each image is saved with a unique filename based on the image type and a counter. (If the program has been run before and there are already images of the specified type in the destination directory, it continues the counter from the last saved image)
+
 ## USAGE
 ```
 Usage: python3 main.py -s <query> [-t <image_type>] [-d <directory>] [-h]
